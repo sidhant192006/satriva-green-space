@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { quoteHref } from "@/lib/util";
-import { Leaf } from "./Icons";
+import Image from "next/image";
 import MobileMenu from "./MobileMenu";
 import NavLinks from "./NavLinks";
 import ThemeToggle from "./ThemeToggle";
@@ -10,7 +10,7 @@ export default function Header() {
     <header className="site-head" id="top">
       <div className="wrap">
         <Link className="brand" href="/" aria-label="Satriva, home">
-          <Leaf />
+          <Image className="brand-logo" src="/logo-header.png" alt="" width={40} height={51} priority />
           Satriva
         </Link>
 

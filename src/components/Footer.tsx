@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { FOOTER_CITIES } from "@/lib/locations";
 import { services } from "@/lib/services";
@@ -8,6 +9,7 @@ export default function Footer() {
     <footer className="foot">
       <div className="wrap">
         <div className="foot-top">
+          <Image className="foot-logo" src="/logo.png" alt="Satriva Green Space logo" width={96} height={145} />
           <p className="foot-tag">{SITE.tagline}</p>
           <ul className="foot-nav">
             {NAV.map((item) => (

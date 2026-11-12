@@ -68,7 +68,7 @@ export function organizationSchema() {
     description: SITE.description,
     slogan: SITE.tagline,
     image: absoluteUrl("/images/og/default.webp"),
-    logo: absoluteUrl("/images/logo.webp"),
+    logo: absoluteUrl("/logo.png"),
     telephone: CONTACT.phoneHref,
     email: CONTACT.email,
     priceRange: "$$",

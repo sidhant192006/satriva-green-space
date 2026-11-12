@@ -1,3 +1,5 @@
+import { readFile } from "node:fs/promises";
+import path from "node:path";
 import { ImageResponse } from "next/og";
 
 /** The card shown when a page is shared on WhatsApp, Facebook, LinkedIn and similar. */
@@ -5,7 +7,9 @@ export const alt = "Satriva. Natural and artificial vertical gardens, moss walls
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-export default function OpenGraphImage() {
+export default async function OpenGraphImage() {
+  const logo = await readFile(path.join(process.cwd(), "public", "logo-header.png"));
+  const logoSrc = `data:image/png;base64,${logo.toString("base64")}`;
   return new ImageResponse(
     (
       <div
@@ -20,7 +24,11 @@ export default function OpenGraphImage() {
           color: "#e8eee2",
         }}
       >
-        <div style={{ display: "flex", fontSize: 28, letterSpacing: 10, color: "#d9c28f" }}>SATRIVA</div>
+        <div style={{ display: "flex", alignItems: "center", fontSize: 28, letterSpacing: 10, color: "#d9c28f" }}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={logoSrc} alt="" width={53} height={80} style={{ marginRight: 24 }} />
+          SATRIVA
+        </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div style={{ display: "flex", fontSize: 88, lineHeight: 1.02, fontFamily: "serif" }}>
             Vertical gardens,
