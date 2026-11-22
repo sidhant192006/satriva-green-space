@@ -6,6 +6,10 @@ import { ImageResponse } from "next/og";
 export const alt = "Satriva. Natural and artificial vertical gardens, moss walls and balcony landscaping.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
+<<<<<<< HEAD
+=======
+export const dynamic = "force-static";
+>>>>>>> 9797acb (Update website)
 
 export default async function OpenGraphImage() {
   const logo = await readFile(path.join(process.cwd(), "public", "logo-header.png"));
