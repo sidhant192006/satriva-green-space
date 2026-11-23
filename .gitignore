@@ -4,4 +4,6 @@ out
 *.tsbuildinfo
 .env*.local
 .DS_Store
+
 src.zip
+*.zip

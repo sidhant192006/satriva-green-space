@@ -35,7 +35,7 @@ jobs:
         run: npm run build
         env:
           # Your live address, no trailing slash. Or set a repo variable named SITE_URL.
-          NEXT_PUBLIC_SITE_URL: ${{ vars.SITE_URL || 'https://satriva.in' }}
+          NEXT_PUBLIC_SITE_URL: ${{ vars.SITE_URL || 'https://satrivagreenspace.com' }}
       - name: Keep Pages from running Jekyll
         run: touch out/.nojekyll
       - name: Upload artifact
