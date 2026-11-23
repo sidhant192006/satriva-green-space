@@ -4,11 +4,8 @@ import { locations } from "@/lib/locations";
 import { absoluteUrl } from "@/lib/seo";
 import { services } from "@/lib/services";
 
-<<<<<<< HEAD
-=======
 export const dynamic = "force-static";
 
->>>>>>> 9797acb (Update website)
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   const entry = (
